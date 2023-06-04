@@ -1,0 +1,25 @@
+﻿@model Order
+
+<h5>Позиции заказа:</h5>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Производитель стола</th>
+            <th>Модель стола</th>
+            <th>Количество</th>
+            <th>Цена за единицу</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Position position in Model.Positions)
+        {
+            <tr>
+                <td>@position.Table.Manufacturer</td>
+                <td>@position.Table.Model</td>
+                <td>@position.Count</td>
+                <td>@position.SellingPrice</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,94 @@
+﻿@{
+    Layout = null;
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TableStore.styles.css" asp-append-version="true" />
+    ViewData["Title"] = "Регистрация";
+    string[] genders = { "Мужской", "Женский" };
+}
+
+@model Client
+
+<h2>Регистрация нового пользователя</h2>
+
+<form asp-controller="Register" asp-action="Register" method="post">
+<div class="row">
+    <div class="col-md-4">
+        
+            <div class="form-group">
+                <label asp-for="Surname" class="control-label">Фамилия</label>
+                <input asp-for="Surname" class="form-control" required />
+                <span asp-validation-for="Surname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Имя</label>
+                <input asp-for="Name" class="form-control" required />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Patronymic" class="control-label">Отчество</label>
+                <input asp-for="Patronymic" class="form-control" required />
+                <span asp-validation-for="Patronymic" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label">Пол</label>
+                <select asp-for="Gender" class="form-control">
+                    <option selected>Мужской</option>
+                    <option>Женский</option>
+                </select>
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactNumber" class="control-label">Контактный номер телефона</label>
+                <input asp-for="ContactNumber" class="form-control" data-mask="phone" required />
+                <span asp-validation-for="ContactNumber" data-mask="number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BirthDate" class="control-label">Дата рождения</label>
+                <input asp-for="BirthDate" type="date" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label asp-for="Login" class="control-label">Логин</label>
+                <input asp-for="Login" class="form-control" required />
+                <span asp-validation-for="Login" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label">Пароль</label>
+                <input asp-for="Password" type="password" class="form-control" required />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Регистрация</button>
+       
+    </div>
+</div>
+ </form>
+
+<script src="https://unpkg.com/imask"></script>
+<script src="js/main.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const mask = (dataValue, options) => {
+            const elements = document.querySelectorAll(`[data-mask="${dataValue}"]`)
+            if (!elements) return
+
+            elements.forEach(el => {
+                IMask(el, options)
+            })
+        }
+
+        mask('phone', {
+            mask: '+{7} (000) 000 00-00'
+        })
+
+        mask('date', {
+            mask: Date,
+            min: new Date(1900, 0, 1),
+        })
+
+        mask('number', {
+            mask: Number,
+        })
+    })
+</script>

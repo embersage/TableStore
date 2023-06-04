@@ -1,0 +1,26 @@
+﻿@model Table
+
+@if (Model.Type == "Компьютерный" && ViewBag.ComputerDesk != null)
+{
+    <div class="text-center p-2">
+        <h4>Возможность регулировкать высоту</h4>
+        <p>@(ViewBag.ComputerDesk.HeightAdjustable ? "Да" : "Нет")</p>
+        <h4>Дополнительные опции</h4>
+        <p>@ViewBag.ComputerDesk.AdditionalOptions</p>
+    </div>
+}
+else if (Model.Type == "Кухонный" && ViewBag.KitchenTable != null)
+{
+    <div class="text-center p-2">
+        <h4>Количество мест</h4>
+        <p>@ViewBag.KitchenTable.NumberOfSeats</p>
+        <h4>Возможность раздвинуть</h4>
+        <p>@(ViewBag.KitchenTable.IsExtendable ? "Да" : "Нет")</p>
+    </div>
+}
+else
+{
+    <div class="text-center p-2">
+        <h4>Нет дополнительной информации.</h4>
+    </div>
+}

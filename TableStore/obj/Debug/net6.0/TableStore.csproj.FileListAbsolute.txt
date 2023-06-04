@@ -1,0 +1,183 @@
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\appsettings.Development.json
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\appsettings.json
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\TableStore.staticwebassets.runtime.json
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\TableStore.exe
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\TableStore.deps.json
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\TableStore.runtimeconfig.json
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\TableStore.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\TableStore.pdb
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Azure.Core.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Azure.Identity.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Humanizer.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\Mono.TextTemplating.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\System.CodeDom.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\System.Memory.Data.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\System.Text.Json.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\C# projects\TableStore\TableStore\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\TableStore.csproj.AssemblyReference.cache
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\TableStore.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\TableStore.AssemblyInfoInputs.cache
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\TableStore.AssemblyInfo.cs
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\TableStore.csproj.CoreCompileInputs.cache
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\TableStore.MvcApplicationPartsAssemblyInfo.cache
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\TableStore.RazorAssemblyInfo.cache
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\TableStore.RazorAssemblyInfo.cs
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\staticwebassets\msbuild.TableStore.Microsoft.AspNetCore.StaticWebAssets.props
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\staticwebassets\msbuild.build.TableStore.props
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.TableStore.props
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.TableStore.props
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\staticwebassets.pack.json
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\staticwebassets.build.json
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\staticwebassets.development.json
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\scopedcss\bundle\TableStore.styles.css
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\scopedcss\projectbundle\TableStore.bundle.scp.css
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\TableStore.csproj.CopyComplete
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\TableStore.dll
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\refint\TableStore.dll
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\TableStore.pdb
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\TableStore.genruntimeconfig.cache
+D:\C# projects\TableStore\TableStore\obj\Debug\net6.0\ref\TableStore.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\appsettings.Development.json
+D:\TableStore\TableStore\bin\Debug\net6.0\appsettings.json
+D:\TableStore\TableStore\bin\Debug\net6.0\TableStore.staticwebassets.runtime.json
+D:\TableStore\TableStore\bin\Debug\net6.0\TableStore.exe
+D:\TableStore\TableStore\bin\Debug\net6.0\TableStore.deps.json
+D:\TableStore\TableStore\bin\Debug\net6.0\TableStore.runtimeconfig.json
+D:\TableStore\TableStore\bin\Debug\net6.0\TableStore.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\TableStore.pdb
+D:\TableStore\TableStore\bin\Debug\net6.0\Azure.Core.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Azure.Identity.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Humanizer.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Mono.TextTemplating.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\System.CodeDom.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\System.Memory.Data.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\System.Text.Json.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\TableStore\TableStore\obj\Debug\net6.0\TableStore.csproj.AssemblyReference.cache
+D:\TableStore\TableStore\obj\Debug\net6.0\TableStore.GeneratedMSBuildEditorConfig.editorconfig
+D:\TableStore\TableStore\obj\Debug\net6.0\TableStore.AssemblyInfoInputs.cache
+D:\TableStore\TableStore\obj\Debug\net6.0\TableStore.AssemblyInfo.cs
+D:\TableStore\TableStore\obj\Debug\net6.0\TableStore.csproj.CoreCompileInputs.cache
+D:\TableStore\TableStore\obj\Debug\net6.0\TableStore.MvcApplicationPartsAssemblyInfo.cache
+D:\TableStore\TableStore\obj\Debug\net6.0\TableStore.RazorAssemblyInfo.cache
+D:\TableStore\TableStore\obj\Debug\net6.0\TableStore.RazorAssemblyInfo.cs
+D:\TableStore\TableStore\obj\Debug\net6.0\staticwebassets\msbuild.TableStore.Microsoft.AspNetCore.StaticWebAssets.props
+D:\TableStore\TableStore\obj\Debug\net6.0\staticwebassets\msbuild.build.TableStore.props
+D:\TableStore\TableStore\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.TableStore.props
+D:\TableStore\TableStore\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.TableStore.props
+D:\TableStore\TableStore\obj\Debug\net6.0\staticwebassets.pack.json
+D:\TableStore\TableStore\obj\Debug\net6.0\staticwebassets.build.json
+D:\TableStore\TableStore\obj\Debug\net6.0\staticwebassets.development.json
+D:\TableStore\TableStore\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\TableStore\TableStore\obj\Debug\net6.0\scopedcss\bundle\TableStore.styles.css
+D:\TableStore\TableStore\obj\Debug\net6.0\scopedcss\projectbundle\TableStore.bundle.scp.css
+D:\TableStore\TableStore\obj\Debug\net6.0\TableStore.csproj.CopyComplete
+D:\TableStore\TableStore\obj\Debug\net6.0\TableStore.dll
+D:\TableStore\TableStore\obj\Debug\net6.0\refint\TableStore.dll
+D:\TableStore\TableStore\obj\Debug\net6.0\TableStore.pdb
+D:\TableStore\TableStore\obj\Debug\net6.0\TableStore.genruntimeconfig.cache
+D:\TableStore\TableStore\obj\Debug\net6.0\ref\TableStore.dll
+D:\TableStore\TableStore\obj\Debug\net6.0\scopedcss\Views\Store\_Layout.cshtml.rz.scp.css
+D:\TableStore\TableStore\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\TableStore\TableStore\obj\Debug\net6.0\scopedcss\Views\Clients\_Layout.cshtml.rz.scp.css
+D:\TableStore\TableStore\bin\Debug\net6.0\EPPlus.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\EPPlus.Interfaces.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\EPPlus.System.Drawing.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\TableStore\TableStore\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll

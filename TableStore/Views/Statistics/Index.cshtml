@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Статистика";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="p-2 bg-bg-primary text-center">Экспорт статистики</h1>
+<style>
+    form {
+        text-align: center;
+    }
+</style>
+<form method="post" action="@Url.Action("ExportToExcel", "Statistics")">
+    <input type="submit" value="Экспорт в Excel" />
+</form>

@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "~/Views/Store/_Layout.cshtml";
+}
+
+@model Cart
+
+<h2 class="m-3">Ваша корзина</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col font-weight-bold">Количество</div>
+        <div class="col font-weight-bold">Товар</div>
+        <div class="col font-weight-bold text-right">Цена</div>
+        <div class="col font-weight-bold text-right">Общая сумма</div>
+        <div class="col"></div>
+    </div>
+    @if (Model.Selections.Count() == 0)
+    {
+        <div class="row mt-2">
+            <div class="col-12">
+                <h4>Корзина пуста</h4>
+            </div>
+        </div>
+    }
+    else
+    {
+        @foreach (Position position in Model.Selections)
+        {
+            <div class="row mt-1">
+                <div class="col">@position.Count</div>
+                <div class="col">@position.Table.Model</div>
+                <div class="col text-right">@position.Table.Price.ToString("f2")</div>
+                <div class="col text-right">@((position.Table.Price * position.Count).ToString("f2")) рублей</div>
+                <div class="col">
+                    <form asp-action="RemoveFromCart">
+                        <button type="submit" name="tableId" value="@position.TableId"
+                                class="btn btn-sm btn-outline-danger">
+                            Удалить
+                        </button>
+                    </form>
+                </div>
+            </div>
+        }
+    }
+    <div class="row mt-2">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col text-right font-weight-bold">Всего:</div>
+        <div class="col text-right font-weight-bold">
+            @(Model.Selections.Sum(e => e.Table.Price * e.Count).ToString("f2")) рублей
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+<div class="text-align-content-center m-2">
+    @if (ViewBag.returnUrl != null)
+    {
+        <a href="@ViewBag.returnUrl" class="btn btn-outline-primary">Продолжить покупки</a>
+    }
+    <a asp-action="CreateOrder" class="btn btn-primary">Оформить заказ</a>
+</div>

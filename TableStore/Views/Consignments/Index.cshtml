@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Все поставки";
+}
+@model IQueryable<Consignment>
+
+<h3 class="p-2 bg-bg-primary text-white text-center">Поставки</h3>
+
+<div class="text-center р-2">
+    <a asp-action="UpdateConsignment" asp-route-id="0" class="btn btn-primary">Добавить</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-center">Код поставки</th>
+            <th class="text-center">Код поставщика</th>
+            <th class="text-center">Количество товара</th>
+            <th class="text-center">Цена закупки</th>
+            <th class="text-center">Дата операции</th>
+            <th class="text-center">Действие</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                <td class="text-center" colspan="6">Нет данных</td>
+            </tr>
+        }
+        else
+        {
+            @foreach (Consignment consignment in Model)
+            {
+                <tr>
+                    <td class="text-center">@consignment.Id</td>
+                    <td class="text-center">@consignment.ProviderId</td>
+                    <td class="text-center">@consignment.Count</td>
+                    <td class="text-center">@consignment.PurchasePrice</td>
+                    <td class="text-center">@consignment.DateOfOperation.ToString("dd-MM-yyyy")</td>
+                    <td class="text-center"> 
+                        <form asp-action="DeleteConsignment" method="post">
+                            <input type="hidden" name="Id" value="@consignment.Id">
+                            <a asp-action="UpdateConsignment" asp-route-id="@consignment.Id" class="btn btn-outline-primary">Редактировать</a>
+                            <button type="submit" class="btn btn-outline-danger">Удалить</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

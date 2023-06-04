@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Обновление поставки";
+}
+@model Consignment
+
+<form asp-action="UpdateConsignment" method="post">
+    <div class="form-group">
+        <label asp-for="Provider">Код поставщика</label>
+        <select class="form-control" asp-for="ProviderId">
+            @if (Model.Id == 0)
+            {
+                <option disabled selected>Выберите поставщика</option>
+            }
+            @foreach (Provider provider in ViewBag.Providers)
+            {
+                <option selected="@(Model.Provider?.Id == provider.Id)" value="@provider.Id">@provider.Name</option>
+            }
+        </select>
+    </div>  
+    <div class="form-group">
+        <label asp-for="Count">Количество</label>
+        <input name="Count" class="form-control" data-mask="number" value="@Model.Count" />
+    </div>
+    <div class="form-group">
+        <label asp-for="PurchasePrice">Цена закупки</label>
+        <input name="PurchasePrice" class="form-control" data-mask="number" value="@Model.PurchasePrice" />
+    </div>
+    <div class="form-group">
+        <label asp-for="DateOfOperation">Дата операции</label>
+        <input type="date" value="@DateTime.Today.ToString("yyyy-MM-dd")" name="DateOfOperation" class="form-control" required />
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit">Сохранить</button>
+        <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+    </div>
+</form>
+
+<script src="https://unpkg.com/imask"></script>
+<script src="js/main.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const mask = (dataValue, options) => {
+            const elements = document.querySelectorAll(`[data-mask="${dataValue}"]`)
+            if (!elements) return
+
+            elements.forEach(el => {
+                IMask(el, options)
+            })
+        }
+
+        mask('phone', {
+            mask: '+{7} (000) 000 00-00'
+        })
+
+        mask('date', {
+            mask: Date,
+            min: new Date(1900, 0, 1),
+        })
+
+        mask('number', {
+            mask: Number,
+        })
+    })
+</script>

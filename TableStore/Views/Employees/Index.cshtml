@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Все работники";
+}
+@model IQueryable<Employee>
+
+<h3 class="p-2 bg-bg-primary text-white text-center">Работники</h3>
+
+<div class="text-center р-2">
+    <a asp-action="UpdateEmployee" asp-route-id="0" class="btn btn-primary">Добавить</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-center">Код работника</th>
+            <th class="text-center">Фамилия</th>
+            <th class="text-center">Имя</th>
+            <th class="text-center">Отчество</th>
+            <th class="text-center">Пол</th>
+            <th class="text-center">Контактный номер телефона</th>
+            <th class="text-center">Дата рождения</th>
+            <th class="text-center">Зарплата</th>
+            <th class="text-center">Логин</th>
+            <th class="text-center">Пароль</th>
+            <th class="text-center">Работает с</th>
+            <th class="text-center">Действие</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                <td class="text-center" colspan="12">Нет данных</td>
+            </tr>
+        }
+        else
+        {
+            @foreach (Employee employee in Model)
+            {
+                <tr>
+                    <td class="text-center">@employee.Id</td>
+                    <td class="text-center">@employee.Surname</td>
+                    <td class="text-center">@employee.Name</td>
+                    <td class="text-center">@employee.Patronymic</td>
+                    <td class="text-center">@employee.Gender</td>
+                    <td class="text-center">@employee.ContactNumber</td>
+                    <td class="text-center">@employee.BirthDate.ToString("dd-MM-yyyy")</td>
+                    <td class="text-center">@employee.Salary</td>
+                    <td class="text-center">@employee.Login</td>
+                    <td class="text-center">@employee.Password</td>
+                    <td class="text-center">@employee.WorksFrom.ToString("dd-MM-yyyy")</td>
+                    <td class="text-center">
+                        <form asp-action="DeleteEmployee" method="post">
+                            <input type="hidden" name="Id" value="@employee.Id">
+                            <a asp-action="UpdateEmployee" asp-route-id="@employee.Id" class="btn btn-outline-primary">Редактировать</a>
+                            <button type="submit" class="btn btn-outline-danger">Удалить</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

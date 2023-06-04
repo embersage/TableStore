@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Все поставщики";
+}
+@model IQueryable<Provider>
+
+<h3 class="p-2 bg-bg-primary text-white text-center">Поставщики</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-center">Код поставщика</th>
+            <th class="text-center">Наименование</th>
+            <th class="text-center">Адрес</th>
+            <th class="text-center">Действие</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                <td class="text-center" colspan="4">Нет данных</td>
+            </tr>
+        }
+        else
+        {
+            @foreach (Provider provider in Model)
+            {
+                <tr>
+                    <td class="text-center">@provider.Id</td>
+                    <td class="text-center">@provider.Name</td>
+                    <td class="text-center">@provider.Address</td>
+                    <td class="text-center">
+                        <form asp-action="DeleteProvider" method="post">
+                            <input type="hidden" name="Id" value="@provider.Id">
+                            <a asp-action="UpdateProvider" asp-route-id="@provider.Id" class="btn btn-outline-primary">Редактировать</a>
+                            <button type="submit" class="btn btn-outline-danger">Удалить</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+    <div class="text-center р-2">
+        <a asp-action="UpdateProvider" asp-route-id="0" class="btn btn-primary">Добавить</a>
+    </div>
+</table>

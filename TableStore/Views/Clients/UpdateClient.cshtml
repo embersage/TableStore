@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Обновление клиента";
+    string[] genders = { "Мужской", "Женский" };
+}
+@model Client
+
+<form asp-action="UpdateClient" method="post">
+    <div class="form-group">
+        <label asp-for="Surname">Фамилия</label>
+        <input name="Surname" class="form-control" value="@Model.Surname" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Name">Имя</label>
+        <input name="Name" class="form-control" value="@Model.Name" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Patronymic">Отчество</label>
+        <input name="Patronymic" class="form-control" value="@Model.Patronymic" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Gender">Пол</label>
+        <select class="form-control" asp-for="Gender">
+            @if (Model.Id == 0)
+            {
+                <option disabled selected>Выберите пол</option>
+            }
+            @foreach (var gender in genders)
+            {
+                <option selected="@(Model.Gender == gender)">@gender</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="ContactNumber">Контактный номер телефона</label>
+        <input name="ContactNumber" class="form-control" data-mask="phone" value="@Model.ContactNumber" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="BirthDate">Дата рождения</label>
+        <input type="date" value="@DateTime.Today.ToString("yyyy-MM-dd")" name="BirthDate" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Login">Логин</label>
+        <input name="Login" class="form-control" value="@Model.Login" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Password">Пароль</label>
+        <input name="Password" class="form-control" value="@Model.Password" required />
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit">Сохранить</button>
+        <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+    </div>
+</form>
+
+<script src="https://unpkg.com/imask"></script>
+<script src="js/main.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const mask = (dataValue, options) => {
+            const elements = document.querySelectorAll(`[data-mask="${dataValue}"]`)
+            if (!elements) return
+
+            elements.forEach(el => {
+                IMask(el, options)
+            })
+        }
+
+        mask('phone', {
+            mask: '+{7} (000) 000 00-00'
+        })
+
+        mask('date', {
+            mask: Date,
+            min: new Date(1900, 0, 1),
+        })
+
+        mask('number', {
+            mask: Number,
+        })
+    })
+</script>

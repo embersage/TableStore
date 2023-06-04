@@ -1,0 +1,109 @@
+﻿@{
+    ViewData["Title"] = "Все товары";
+}
+@model IQueryable<Table>
+
+<h3 class="p-2 bg-bg-primary text-white text-center">Товары</h3>
+
+<div class="text-center р-2">
+	<a asp-action="UpdateTable" asp-route-id="0" class="btn btn-primary">Добавить</a>
+</div>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th class="text-center">Код стола</th>
+			<th class="text-center">Код поставки</th>
+			<th class="text-center">Количество</th>
+			<th class="text-center">Производитель</th>
+			<th class="text-center">Модель</th>
+			<th class="text-center">Срок службы (лет)</th>
+			<th class="text-center">Гарантия (месяцев)</th>
+			<th class="text-center">Вес (кг)</th>
+			<th class="text-center">Ширина (см)</th>
+			<th class="text-center">Высота (см)</th>
+			<th class="text-center">Глубина (см)</th>
+			<th class="text-center">Материал столешницы</th>
+			<th class="text-center">Материал подстолья</th>
+			<th class="text-center">Цвет столешницы</th>
+			<th class="text-center">Цвет подстолья</th>
+			<th class="text-center">Тип столешницы</th>
+			<th class="text-center">Максимальная нагрузка</th>
+			<th class="text-center">Тип</th>
+			<th class="text-center">Цена (руб)</th>
+			<th class="text-center">Действие</th>
+		</tr>
+	</thead>
+	<tbody>
+		@if (Model.Count() == 0)
+		{
+			<tr>
+				<td class="text-center" colspan="20">Нет данных</td>
+			</tr>
+		}
+		else
+		{
+			@foreach (Table table in Model)
+			{
+				<tr>
+					<td class="text-center">@table.Id</td>
+					<td class="text-center">@table.ConsignmentId</td>
+					<td class="text-center">@table.Count</td>
+					<td class="text-center">@table.Manufacturer</td>
+					<td class="text-center">@table.Model</td>
+					<td class="text-center">@table.LifeTime</td>
+					<td class="text-center">@table.Guarantee</td>
+					<td class="text-center">@table.Weight</td>
+					<td class="text-center">@table.Width</td>
+					<td class="text-center">@table.Height</td>
+					<td class="text-center">@table.Depth</td>
+					<td class="text-center">@table.CountertopMaterial</td>
+					<td class="text-center">@table.UnderframeMaterial</td>
+					<td class="text-center">@table.CountertopColor</td>
+					<td class="text-center">@table.UnderframeColor</td>
+					<td class="text-center">@table.CountertopType</td>
+					<td class="text-center">@table.MaxLoad</td>
+					<td class="text-center">@table.Type</td>
+					<td class="text-center">@table.Price</td>
+					<td class="text-center">
+						<button class="btn btn-outline-primary" onclick="showAdditionalInfo(@table.Id)">Дополнительно</button>
+						<form asp-action="DeleteTable" method="post">
+							<input type="hidden" name="Id" value="@table.Id">
+							<a asp-action="UpdateTable" asp-route-id="@table.Id" class="btn btn-outline-primary">Редактировать</a>
+							<button type="submit" class="btn btn-outline-danger">Удалить</button>
+						</form>
+					</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>
+
+<div class="modal fade" id="additionalInfoModal" tabindex="-1" role="dialog" aria-labelledby="additionalInfoModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="additionalInfoModalLabel">Дополнительная информация о столе</h5>
+			</div>
+			<div class="modal-body">
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	function showAdditionalInfo(tableId) {
+		$.ajax({
+			url: '@Url.Action("GetAdditionalInfo", "Tables")',
+			type: 'GET',
+			data: { id: tableId },
+			success: function (data) {
+				$('#additionalInfoModal .modal-body').html(data);
+				$('#additionalInfoModal').modal('show');
+			},
+			error: function () {
+				alert('Произошла ошибка при загрузке дополнительной информации.');
+			}
+		});
+	}
+</script>

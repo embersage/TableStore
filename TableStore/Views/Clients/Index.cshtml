@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Все клиенты";
+}
+@model IQueryable<Client>
+
+<h3 class="p-2 bg-bg-primary text-white text-center">Клиенты</h3>
+
+<div class="text-center р-2">
+    <a asp-action="UpdateClient" asp-route-id="0" class="btn btn-primary">Добавить</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-center">Код клиента</th>
+            <th class="text-center">Фамилия</th>
+            <th class="text-center">Имя</th>
+            <th class="text-center">Отчество</th>
+            <th class="text-center">Пол</th>
+            <th class="text-center">Контактный номер телефона</th>
+            <th class="text-center">Дата рождения</th>
+            <th class="text-center">Логин</th>
+            <th class="text-center">Пароль</th>
+            <th class="text-center">Действие</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                <td class="text-center" colspan="10">Нет данных</td>
+            </tr>
+        }
+        else
+        {
+            @foreach (Client Client in Model)
+            {
+                <tr>
+                    <td class="text-center">@Client.Id</td>
+                    <td class="text-center">@Client.Surname</td>
+                    <td class="text-center">@Client.Name</td>
+                    <td class="text-center">@Client.Patronymic</td>
+                    <td class="text-center">@Client.Gender</td>
+                    <td class="text-center">@Client.ContactNumber</td>
+                    <td class="text-center">@Client.BirthDate.ToString("dd-MM-yyyy")</td>
+                    <td class="text-center">@Client.Login</td>
+                    <td class="text-center">@Client.Password</td>
+                    <td class="text-center">
+                        <form asp-action="DeleteClient" method="post">
+                            <input type="hidden" name="Id" value="@Client.Id">
+                            <a asp-action="UpdateClient" asp-route-id="@Client.Id" class="btn btn-outline-primary">Редактировать</a>
+                            <button type="submit" class="btn btn-outline-danger">Удалить</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

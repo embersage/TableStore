@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Детали заказа";
+    Layout = "~/Views/Store/_Layout.cshtml";
+}
+
+@using Newtonsoft.Json;
+
+@model Order
+
+<h2 class="m-3">Общая информация</h2>
+
+<form asp-action="CreateOrder" method="post" class="m-4">
+    @{
+        var userData = Context.Request.Cookies["UserData"];
+        if (!string.IsNullOrEmpty(userData))
+        {
+            var clientData = JsonConvert.DeserializeObject<Client>(userData);
+            <div class="form-group" hidden>
+                <input asp-for="ClientId" value="@clientData.Id" class="form-control" />
+            </div>
+        }
+    }
+    <div class="form-group" hidden>
+        <input asp-for="EmployeeId"  value="@null" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Дата заказа:</label>
+        <input asp-for="DateOfOperation" class="form-control" type="date" value="@DateTime.Today.ToString("yyyy-MM-dd")"/>
+    </div>
+    <div class="form-group" hidden>
+        <input asp-for="Status" value="Активен" class="form-control" />
+    </div>
+    <div class="text-center m-2">
+        <button type="submit" class="btn btn-primary">Оформить заказ</button>
+        <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+    </div>
+</form>

@@ -1,0 +1,230 @@
+﻿@{
+    ViewData["Title"] = "Обновление товара";
+    string[] materials = { "МДФ", "ДСП", "Металл", "Пластик" };
+    string[] colors = { "Белый", "Черный", "Венге", "Бежевый", "Серый" };
+    string[] countertopTypes = { "Прямоугольная", "Квадратная", "Круглая", "Овальная" };
+    string[] tableTypes = { "Компьютерный", "Кухонный" };
+}
+
+@model Table
+
+<form asp-action="UpdateTable" method="post">
+    <div class="form-group">
+        <label asp-for="Consignment">Код поставки</label>
+        <select class="form-control" asp-for="ConsignmentId">
+            @if (Model.Id == 0)
+            {
+                <option disabled selected>Выберите поставку</option>
+            }
+            @foreach (Consignment consignment in ViewBag.Consignments)
+            {
+                <option selected="@(Model.Consignment?.Id == consignment.Id)" value="@consignment.Id">@consignment.Id</option>
+            }
+        </select>
+    </div>  
+    <div class="form-group">
+        <label asp-for="Count">Количество</label>
+        <input name="Count" class="form-control" data-mask="number" value="@Model.Count" required/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Manufacturer">Производитель</label>
+        <input name="Manufacturer" class="form-control" value="@Model.Manufacturer" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Model">Модель</label>
+        <input name="Model" class="form-control" value="@Model.Model" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="LifeTime">Срок службы (лет)</label>
+        <input name="LifeTime" class="form-control" data-mask="number" value="@Model.LifeTime" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Guarantee">Гарантия (месяцев)</label>
+        <input name="Guarantee" class="form-control" data-mask="number" value="@Model.Guarantee" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Weight">Вес (кг)</label>
+        <input name="Weight" class="form-control" data-mask="number" value="@Model.Weight" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Width">Ширина (см)</label>
+        <input name="Width" class="form-control" data-mask="number" value="@Model.Width" required />
+    </div> 
+    <div class="form-group">
+        <label asp-for="Height">Высота (см)</label>
+        <input name="Height" class="form-control" data-mask="number" value="@Model.Height" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Depth">Глубина (см)</label>
+        <input name="Depth" class="form-control" data-mask="number" value="@Model.Depth" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="CountertopMaterial">Материал столешницы</label>
+        <select class="form-control" asp-for="CountertopMaterial">
+            @if (Model.Id == 0)
+            {
+                <option disabled selected>Выберите материал столешницы</option>
+            }
+            @foreach (var countertopMaterial in materials)
+            {
+                <option selected="@(Model.CountertopMaterial == countertopMaterial)">@countertopMaterial</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="UnderframeMaterial">Материал подстолья</label>
+        <select class="form-control" asp-for="UnderframeMaterial">
+            @if (Model.Id == 0)
+            {
+                <option disabled selected>Выберите материал подстолья</option>
+            }
+            @foreach (var underframeMaterial in materials)
+            {
+                <option selected="@(Model.UnderframeMaterial == underframeMaterial)">@underframeMaterial</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="CountertopColor">Цвет столешницы</label>
+        <select class="form-control" asp-for="CountertopColor">
+            @if (Model.Id == 0)
+            {
+                <option disabled selected>Выберите цвет столешницы</option>
+            }
+            @foreach (var countertopColor in colors)
+            {
+                <option selected="@(Model.CountertopColor == countertopColor)">@countertopColor</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="UnderframeColor">Цвет подстолья</label>
+        <select class="form-control" asp-for="UnderframeColor">
+            @if (Model.Id == 0)
+            {
+                <option disabled selected>Выберите цвет подстолья</option>
+            }
+            @foreach (var underframeColor in colors)
+            {
+                <option selected="@(Model.UnderframeColor == underframeColor)">@underframeColor</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="CountertopType">Тип столешницы</label>
+        <select class="form-control" asp-for="CountertopType">
+            @if (Model.Id == 0)
+            {
+                <option disabled selected>Выберите тип столешницы</option>
+            }
+            @foreach (var countertopType in countertopTypes)
+            {
+                <option selected="@(Model.CountertopType == countertopType)">@countertopType</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="MaxLoad">Максимальная нагрузка</label>
+        <input name="MaxLoad" class="form-control" data-mask="number" value="@Model.MaxLoad" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Price">Цена (руб)</label>
+        <input name="Price" class="form-control" data-mask="number" value="@Model.Price" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Type">Тип стола</label>
+        <select class="form-control" asp-for="Type">
+            @if (Model.Id == 0)
+            {
+                <option disabled selected>Выберите тип стола</option>
+            }
+            @foreach (var tableType in tableTypes)
+            {
+                <option selected="@(Model.Type == tableType)">@tableType</option>
+            }
+        </select>
+    </div>
+    <div class="additional-fields"></div>
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit">Сохранить</button>
+        <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+    </div>
+</form>
+
+<script src="https://unpkg.com/imask"></script>
+<script src="js/main.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const mask = (dataValue, options) => {
+            const elements = document.querySelectorAll(`[data-mask="${dataValue}"]`)
+            if (!elements) return
+
+            elements.forEach(el => {
+                IMask(el, options)
+            })
+        }
+
+        mask('phone', {
+            mask: '+{7} (000) 000 00-00'
+        })
+
+        mask('date', {
+            mask: Date,
+            min: new Date(1900, 0, 1),
+        })
+
+        mask('number', {
+            mask: Number,
+        })
+    })
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const typeSelect = document.querySelector('select.form-control[name="Type"]');
+        const additionalFieldsContainer = document.querySelector('div.additional-fields');
+
+        const showAdditionalFields = () => {
+            const selectedType = typeSelect.value;
+            additionalFieldsContainer.innerHTML = '';
+
+            if (selectedType === 'Кухонный') {
+                additionalFieldsContainer.innerHTML = `
+                        <div class="form-group">
+                            <label asp-for="NumberOfSeats">Количество мест</label>
+                                <input name="NumberOfSeats" class="form-control" data-mask="number" required/>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="IsExtendable">Возможность раздвинуть</label>
+                                <select name="IsExtendable" class="form-control" required>
+                                <option value="true">Да</option>
+                                <option value="false">Нет</option>
+                            </select>
+                        </div>
+                    `;
+            } else if (selectedType === 'Компьютерный') {
+                additionalFieldsContainer.innerHTML = `
+                        <div class="form-group">
+                            <label asp-for="AdditionalOptions">Дополнительные опции</label>
+                                <input name="AdditionalOptions" class="form-control" value="Нет" required />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="HeightAdjustable">Регулировка высоты</label>
+                                <select name="HeightAdjustable" class="form-control" required>
+                                <option value="true">Да</option>
+                                <option value="false">Нет</option>
+                            </select>
+                        </div>
+                    `;
+            }
+        };
+
+        showAdditionalFields();
+
+        typeSelect.addEventListener('change', () => {
+            showAdditionalFields();
+        });
+    });
+</script>
